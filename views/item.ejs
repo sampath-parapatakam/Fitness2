@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Fitness and Diet to get into best shape">
+    <meta name="keywords" content="Fitness, Diet, Diet to get best shape">
+    <meta name="author" content="Sampath Parapatakam">
+    <title> Burn | Welcome </title>
+    <link rel='stylesheet' href="../assets/css/style.css">
+  </head>
+  <body>
+    <% include partials/header.ejs %>
+    <% include partials/user-navigation.ejs %>
+
+    <section id="show1">
+      <div id="show2">
+      <div class="ver1">
+        <% include partials/site-navigation.ejs %>
+      </div>
+      <div class="ver2">
+        <p id="nv"><a href="index">HOME</a>> <a href="categories">Category</a>> Items</p>
+        <form class="back" action="categories" method="get">
+          <input type="submit" name="back" value="back">
+        </form>
+        <div class="img">
+          <div class="img1">
+            <img class="image" src="<%= result.imageUrl %>" alt="<%= result.itemName %>">
+          <!--<img src="./images/upperbody.jpeg" alt="Upperbody">-->
+        </div>
+        <div class="para1">
+          <h3><%= result.itemName %></h3>
+          <p id="par2"><%= result.catalogCategory %></p>
+          <form class="upp1" action="myItems" method="get">
+            <input type="submit" name="Subscribe" value="Subscribe">
+            <input type="submit" name="RateIt" value="Rate It">
+          </form>
+          Rating<% if( result.rating ==1){ %>
+            <span class="rate">&#9733;</span>
+            <span class="unrate">&#9733;&#9733;&#9733;&#9733;</span><br>
+          <% } %>
+          <% if( result.rating ==2){ %>
+            <span class="rate">&#9733;&#9733;</span>
+            <span class="unrate">&#9733;&#9733;&#9733;</span><br>
+          <% } %>
+          <% if( result.rating ==3){ %>
+            <span class="rate">&#9733;&#9733;&#9733;</span>
+            <span class="unrate">&#9733;&#9733;</span><br>
+          <% } %>
+          <% if( result.rating ==4){ %>
+            <span class="rate">&#9733;&#9733;&#9733;&#9733;</span>
+            <span class="unrate">&#9733;</span><br>
+          <% } %>
+          <% if( result.rating ==5){ %>
+            <span class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br>
+          <% } %>
+        </div>
+      </div>
+      <div class="para2">
+        <p>
+          <%= result.description %>
+        </p>
+
+      </div>
+    </div>
+  </div>
+    </section>
+      <% include partials/footer.ejs %>
+  </body>
+</html>

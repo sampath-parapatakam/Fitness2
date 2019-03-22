@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Fitness and Diet to get into best shape">
+    <meta name="keywords" content="Fitness, Diet, Diet to get best shape">
+    <meta name="author" content="Sampath Parapatakam">
+    <title> Burn | Welcome </title>
+    <link rel='stylesheet' href="../assets/css/style.css">
+  </head>
+  <body>
+    <% include partials/header.ejs %>
+    <% include partials/user-navigation.ejs %>
+
+
+    <section id="show1">
+      <div id="show2">
+      <div class="ver1">
+        <% include partials/site-navigation.ejs %>
+      </div>
+      <div class="ver2">
+        <p id="nv"><a href="index">HOME</a>> Categories</p>
+        <% if(category == undefined || category == "Strength"){ %>
+             <h3>Strength</h3>
+              <p class= "one">This type helps in building strength and involves lifting weights to induce muscular contraction which builds the strength.</p>
+                        <ul>
+                          <%
+                          for (var i =0 ; i < data.length; i++)
+                          { if(data[i].catalogCategory == "Strength"){ %>
+                              <li class='sub'><a href="/item?itemCode=<%= data[i].itemCode %>"><%= data[i].itemName %></a></li>
+                            <%	}} %>
+
+
+                    </ul>
+                    <%	} %>
+        <% if(category == undefined || category == "Endurance"){ %>
+            <h3>Endurance</h3>
+               <p class="one">This type of exercises includes activities that increase your breathing and heart rate such as walking, jogging, swimming, and biking.</p>
+          						  <ul>
+                    			<%
+                    			for (var i =0 ; i < data.length;i++)
+                    			{ if(data[i].catalogCategory == "Endurance"){ %>
+              							<li class='sub'><a href="/item?itemCode=<%= data[i].itemCode %>"><%= data[i].itemName %></a></li>
+            							 <%	}}%>
+                    </ul>
+
+                    			<%	} %>
+        <% if(category == undefined || category == "Cardio"){ %>
+            <h3>Cardio</h3>
+                <p class="one">This type of exercise helps you out with fat burning and weight loss</p>
+            						 <ul>
+                        	<%
+                        	for (var i =0 ; i < data.length;i++)
+                        	{ if(data[i].catalogCategory == "Cardio"){ %>
+                        		<li class='sub'><a href="/item?itemCode=<%= data[i].itemCode %>"><%= data[i].itemName %></a></li>
+                        	<%	}}%>
+                        </ul>
+
+                        	<%	} %>
+      </div>
+    </div>
+    </section>
+    <% include partials/footer.ejs %>
+  </body>
+</html>

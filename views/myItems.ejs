@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Fitness and Diet to get into best shape">
+    <meta name="keywords" content="Fitness, Diet, Diet to get best shape">
+    <meta name="author" content="Sampath Parapatakam">
+    <title> Burn | Welcome </title>
+    <link rel='stylesheet' href="../assets/css/style.css">
+  </head>
+  <body>
+    <% include partials/header.ejs %>
+    <% include partials/user-navigation.ejs %>
+
+
+    <section id="show1">
+      <div id="show2">
+      <div class="ver1">
+        <% include partials/site-navigation.ejs %>
+      </div>
+      <div class="ver2">
+        <p id="nv"><a href="index">HOME</a>> MyItems</p>
+        <h2>My Regimes</h2>
+        <table>
+            <tr>
+                 <th>Workout</th>
+                 <th>Focus</th>
+                 <th>My Rating</th>
+                 <th>Number of People Subscribed</th>
+                 <th></th>
+                 <th></th>
+            </tr>
+            <tr>
+                 <td><a href="item?itemCode=6">Endurance</a></td>
+                 <td>Muscle-Endurance</td>
+                 <td><span class="rating">&#9733;&#9733;&#9733;&#9733;</span></td>
+                 <td>30</td>
+                 <td><button onclick="location.href='feedback'">Edit</button></td>
+                 <td><button onclick="location.href='#Discard'">Exit</button></td>
+            </tr>
+            <tr>
+                 <td><a href="item?itemCode=9">Cardio</a></td>
+                 <td>Elliptical</td>
+                 <td><span class="rating">&#9733;&#9733;</span></td>
+                 <td>55</td>
+                 <td><button onclick="location.href='feedback'">Edit</button></td>
+                 <td><button onclick="location.href='#Discard'">Exit</button></td>
+            </tr>
+            <tr>
+                 <td><a href="item?itemCode=1">Strength</a></td>
+                 <td>Upperbody</td>
+                 <td><span class="rating">&#9733;&#9733;&#9733;</span></td>
+                 <td>21</td>
+                 <td><button onclick="location.href='feedback'">Edit</button></td>
+                 <td><button onclick="location.href='#Discard'">Exit</button></td>
+            </tr>
+            </table><br><br>
+          <p class="share">Click <a href="#Discard"> here </a>to share your regime with a friend</p>
+      </div>
+    </div>
+    </section>
+  <% include partials/footer.ejs %>
+  </body>
+</html>

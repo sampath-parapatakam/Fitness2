@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Fitness and Diet to get into best shape">
+    <meta name="keywords" content="Fitness, Diet, Diet to get best shape">
+    <meta name="author" content="Sampath Parapatakam">
+    <title> Burn | Welcome </title>
+    <link rel='stylesheet' href="../assets/css/style.css">
+  </head>
+  <body>
+    <% include partials/header.ejs %>
+    <% include partials/user-navigation.ejs %>
+
+    <section id="show1">
+      <div id="show2">
+      <div class="ver1">
+        <% include partials/site-navigation.ejs %>
+      </div>
+      <div class="ver2">
+        <p id="nv"><a href="index">HOME</a>> <a href="categories">Category</a>> Items</p>
+        <div class="img">
+          <h3>Give Feedback for</h3>
+          <div class="img1">
+            <img class="image" src="../assets/images/upperbody.jpeg" alt="upperbody">
+        </div>
+        <div class="para1">
+          <h3>UpperBody</h3>
+          <p id="par2">Strength</p>
+          <p>This Workout plan helps in building perfect upperbody physic this workout needs equipment for following the perfect routine. </p>
+          <h3>My Rating</h3>
+
+				 <select>
+         <option value="1">1 Star</option>
+         <option value="2">2 Star</option>
+         <option value="3">3 Star</option>
+         <option value="4">4 Star</option>
+				 <option value="5">5 Star</option>
+         </select>&nbsp;&nbsp;&nbsp;&nbsp;
+         <form class="confrim" action="#Discard" method="get">
+           <input type="submit" name="confirm" value="Confirm Rating">
+         </form>
+        </div>
+      </div>
+      <div class="para2">
+      </div>
+    </div>
+  </div>
+    </section>
+      <% include partials/footer.ejs %>
+  </body>
+</html>
